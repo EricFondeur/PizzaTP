@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ingredients">
+
+    <TextView
+        android:id="@+id/IngreChoix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrédient(s) choisi(s)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/IngreDIspo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Ajouter des Ingrédients"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ingre1" />
+
+    <ImageView
+        android:id="@+id/imageView0"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ananas"
+        app:layout_constraintEnd_toStartOf="@+id/imageView1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreDIspo" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/bacon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView0"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/boullettes_de_boeuf_assaisonnees"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/champignons"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/chevre"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/creme_fraiche_legere"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreText0" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/emmental"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/figue_sechees"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/fourne_ambert"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/jambon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/lardon"
+        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreText5" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/fondue"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/merguez"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/miel"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView12" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/mozzarella"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView13" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/oignons"
+        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreText10" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/olive_noires"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/origan"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView16" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/pepperoni"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView17" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/piments"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView18" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/poivrons"
+        app:layout_constraintEnd_toStartOf="@+id/imageView21"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreText15" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/pomme_de_terre"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintEnd_toStartOf="@+id/imageView22"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView20" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/poulet_roti"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+        app:layout_constraintEnd_toStartOf="@+id/imageView23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView21" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/reblochon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+        app:layout_constraintEnd_toStartOf="@+id/imageView24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView22" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/sauce_bbq"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView23" />
+
+    <ImageView
+        android:id="@+id/Ingre1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ananas"
+        app:layout_constraintEnd_toStartOf="@+id/Ingre2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngreChoix" />
+
+    <ImageView
+        android:id="@+id/Ingre4"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ananas"
+        app:layout_constraintEnd_toStartOf="@+id/ValideIngre"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Ingre3"
+        app:layout_constraintTop_toTopOf="@+id/Ingre3" />
+
+    <ImageView
+        android:id="@+id/Ingre3"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ananas"
+        app:layout_constraintEnd_toStartOf="@+id/Ingre4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Ingre2"
+        app:layout_constraintTop_toTopOf="@+id/Ingre2" />
+
+    <ImageView
+        android:id="@+id/Ingre2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ananas"
+        app:layout_constraintEnd_toStartOf="@+id/Ingre3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Ingre1"
+        app:layout_constraintTop_toTopOf="@+id/Ingre1" />
+
+    <TextView
+        android:id="@+id/IngreText0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ananas"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView0"
+        app:layout_constraintStart_toStartOf="@+id/imageView0"
+        app:layout_constraintTop_toBottomOf="@+id/imageView0" />
+
+    <TextView
+        android:id="@+id/IngreText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bacon"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView1"
+        app:layout_constraintStart_toStartOf="@+id/imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <TextView
+        android:id="@+id/IngreText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bouletts Boeuf"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/IngreText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Champignons"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/IngreText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chèvre"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/IngreText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crème Fraîche"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/IngreText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emmental"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/IngreText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Figue"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/IngreText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fourne d'Ambert"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/IngreText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jambon"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/IngreText10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lardons"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/IngreText11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mélange Fondue"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/IngreText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Merguez"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <TextView
+        android:id="@+id/IngreText13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miel"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/IngreText14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mozzarella"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/IngreText15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oignons"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/IngreText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olive Noires"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <TextView
+        android:id="@+id/IngreText17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origan"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView17"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <TextView
+        android:id="@+id/IngreText18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pepperoni"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+    <TextView
+        android:id="@+id/IngreText19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piments"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+    <TextView
+        android:id="@+id/IngreText20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poivrons"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="@+id/imageView20"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <TextView
+        android:id="@+id/IngreText21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pomme de Terre"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+        app:layout_constraintStart_toStartOf="@+id/imageView21"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+    <TextView
+        android:id="@+id/IngreText22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poulet Rôti"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView22"
+        app:layout_constraintStart_toStartOf="@+id/imageView22"
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+    <TextView
+        android:id="@+id/IngreText23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reblochon"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+    <TextView
+        android:id="@+id/IngreText24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sauce BBQ"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView24"
+        app:layout_constraintStart_toStartOf="@+id/imageView24"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <Button
+        android:id="@+id/ValideIngre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        app:layout_constraintBottom_toBottomOf="@+id/Ingre4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Ingre4"
+        app:layout_constraintTop_toTopOf="@+id/Ingre4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
