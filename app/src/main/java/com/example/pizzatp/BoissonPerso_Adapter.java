@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,6 +20,15 @@ public class BoissonPerso_Adapter extends RecyclerView.Adapter<BoissonPerso_Adap
 
     Context leContext;
     ArrayList<BoissonPerso> listBoisson;
+    private OnItemClickListener listener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View itemView, int position);
+    }
 
     public BoissonPerso_Adapter(Context leContext, ArrayList<BoissonPerso> listBoisson) {
         this.leContext = leContext;
@@ -54,6 +64,7 @@ public class BoissonPerso_Adapter extends RecyclerView.Adapter<BoissonPerso_Adap
         TextView nom, prix;
         Button valider;
         ImageView imageView;
+        Button valide;
 
         public BoissonPerso_ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +72,18 @@ public class BoissonPerso_Adapter extends RecyclerView.Adapter<BoissonPerso_Adap
             prix = itemView.findViewById(R.id.Prix);
             valider = itemView.findViewById(R.id.Valide);
             imageView = itemView.findViewById(R.id.ImageView);
+            valide=itemView.findViewById(R.id.Valide);
+            valide.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener!=null){
+                        int position = getAdapterPosition();
+                        if (position!=RecyclerView.NO_POSITION){
+                            listener.onItemClick(itemView, position);
+                        }
+                    }
+                }
+            });
         }
 
         public TextView getNom() {

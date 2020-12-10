@@ -63,10 +63,9 @@
         app:layout_constraintTop_toTopOf="@+id/IngreRecap" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/ZoneBoisson"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ZoneIngre"
         app:layout_constraintTop_toTopOf="@+id/BoisssonRecap" />

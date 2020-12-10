@@ -11,6 +11,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void Init(){
         pateTest=findViewById(R.id.PateTest);
+    }
+
+    public void setPateTest(int image){
+        pateTest.setImageResource(image);
     }
 
 }

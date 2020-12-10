@@ -18,26 +18,39 @@ import java.util.HashSet;
 
 public class Menu extends Fragment {
 
-    TextView zonePate, zoneIngre;
+    TextView zonePate, zoneIngre, zoneBoisson;
     public static final String PREFS_NAME = "Pizza";
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    String pate, taille, sauce;
+    String pate, taille, sauce, boisson;
     HashSet<String> ingreChoix=new HashSet<>();
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        pate=preferences.getString("Pate", null);
+        taille=preferences.getString("Taille", null);
+        sauce=preferences.getString("Sauce", null);
+        ingreChoix=(HashSet<String>)preferences.getStringSet("nomIngre", null);
+        boisson=preferences.getString("Boisson", null);
+        if (!preferences.contains("Pate")){
+
+        }else{
+            zonePate.setText(pate+"-"+taille+"-"+sauce);
+            for (String uneChaine:ingreChoix){
+                zoneIngre.append(String.valueOf(uneChaine));
+            }
+            Log.i("testBoisson", "boisson: "+boisson);
+            zoneBoisson.setText(boisson);
+        }
+    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
         ConstraintLayout monLayout = (ConstraintLayout) inflater.inflate(R.layout.fragment_menu, container, false);
         zonePate=monLayout.findViewById(R.id.ZonePate);
         zoneIngre=monLayout.findViewById(R.id.ZoneIngre);
+        zoneBoisson=monLayout.findViewById(R.id.ZoneBoisson);
         preferences = this.getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        pate=preferences.getString("Pate", null);
-        taille=preferences.getString("Taille", null);
-        sauce=preferences.getString("Sauce", null);
-        zonePate.setText(pate+"-"+taille+"-"+sauce);
-        ingreChoix=(HashSet<String>)preferences.getStringSet("nomIngre", null);
-        for (String uneChaine:ingreChoix){
-            zoneIngre.setText(String.valueOf(uneChaine));
-        }
 
         return monLayout;
     }

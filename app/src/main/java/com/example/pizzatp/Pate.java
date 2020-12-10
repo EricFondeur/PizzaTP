@@ -35,7 +35,7 @@ public class Pate extends Fragment implements View.OnClickListener{
     public static final String PREFS_NAME = "Pizza";
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    MainActivity main;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
         ConstraintLayout monLayout = (ConstraintLayout) inflater.inflate(R.layout.fragment_pate, container, false);
@@ -49,7 +49,6 @@ public class Pate extends Fragment implements View.OnClickListener{
         valider.setOnClickListener(this);
         preferences = this.getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         editor = preferences.edit();
-        main=new MainActivity();
         return monLayout;
     }
 
@@ -67,6 +66,8 @@ public class Pate extends Fragment implements View.OnClickListener{
         editor.putString("Taille", spinTaille.getSelectedItem().toString());
         editor.putString("Sauce", spinSauce.getSelectedItem().toString());
         editor.commit();
+        MainActivity main =new MainActivity();
+        main.setPateTest(R.drawable.check);
     }
 
 }

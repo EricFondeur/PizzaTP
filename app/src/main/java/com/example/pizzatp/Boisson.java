@@ -1,5 +1,7 @@
 package com.example.pizzatp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,6 +21,9 @@ public class Boisson extends Fragment {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     BoissonPerso_Adapter boissonPerso_adapter;
+    public static final String PREFS_NAME = "Pizza";
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
         ConstraintLayout monLayout = (ConstraintLayout) inflater.inflate(R.layout.fragment_boisson, container, false);
@@ -27,6 +32,15 @@ public class Boisson extends Fragment {
         layoutManager=new LinearLayoutManager(this.getContext());
         recyclerView.setLayoutManager(layoutManager);
         boissonPerso_adapter=new BoissonPerso_Adapter(this.getContext(), colBoisson);
+        preferences = this.getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        boissonPerso_adapter.setOnItemClickListener(new BoissonPerso_Adapter.OnItemClickListener(){
+            @Override
+            public void onItemClick(View itemView, int position) {
+                editor.putString("Boisson", colBoisson.get(position).getNom());
+                editor.commit();
+            }
+        });
         recyclerView.setAdapter(boissonPerso_adapter);
         return monLayout;
     }
